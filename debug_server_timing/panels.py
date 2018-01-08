@@ -9,4 +9,4 @@ class ServerTimingPanel(Panel):
         if sql_panel:
             num_queries = len(sql_panel.get('queries', []))
             sql_time = sql_panel.get('sql_time')
-            response['Server-Timing'] = 'sql_time={}; "SQL {} queries"'.format(sql_time, num_queries)
+            response['Server-Timing'] = 'sql_time;dur={};desc="SQL {} queries"'.format(sql_time, num_queries)
